@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
 import dayjs from 'dayjs'
+import { useState } from 'react'
 
 type IFile = {
   name: string
@@ -14,9 +14,11 @@ type Props = {
   total: number
 }
 
+const origin = window.location?.origin
+
 function TableContent(props: Props) {
   const [page, setPage] = useState(1)
-
+  console.log('TableContent ==>')
   const maxPage = Math.ceil(props.total / 10)
 
   const handlePre = () => {
@@ -51,7 +53,7 @@ function TableContent(props: Props) {
                 <td>{file.name}</td>
                 <td>{dayjs(file.time).format('YYYY-MM-DD HH:mm:ss')}</td>
                 <td>
-                  {location.origin}
+                  {origin}
                   {file.path}
                 </td>
               </tr>
@@ -78,3 +80,5 @@ function TableContent(props: Props) {
 }
 
 export default TableContent
+
+export const runtime = 'edge'

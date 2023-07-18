@@ -17,6 +17,7 @@ export const GET = async () => {
         name: file
       })
     }
+    fileInfoList.sort((a, b) => b.time - a.time)
     return new Response(
       JSON.stringify({
         code: 0,

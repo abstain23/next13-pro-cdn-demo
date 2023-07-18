@@ -1,4 +1,3 @@
-import { PageConfig } from 'next'
 import fs from 'fs'
 import path from 'path'
 
@@ -34,9 +33,4 @@ export async function POST(req: Request) {
       }
     }
   )
-}
-export const config: PageConfig = {
-  api: {
-    // bodyParser
-  }
 }

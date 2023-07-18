@@ -8,6 +8,8 @@ function SwitchTheme() {
     themeChange(false)
   }, [])
 
+  console.log('SwitchTheme ===>')
+
   return (
     <div>
       🌞

@@ -37,6 +37,9 @@ dependencies:
   formidable:
     specifier: ^2.1.1
     version: 2.1.1
+  mime:
+    specifier: ^3.0.0
+    version: 3.0.0
   multer:
     specifier: 1.4.5-lts.1
     version: 1.4.5-lts.1
@@ -61,6 +64,11 @@ dependencies:
   typescript:
     specifier: 5.0.4
     version: 5.0.4
+
+devDependencies:
+  '@types/mime':
+    specifier: ^3.0.1
+    version: 3.0.1
 
 packages:
 
@@ -348,7 +356,6 @@ packages:
 
   /@types/mime@3.0.1:
     resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==}
-    dev: false
 
   /@types/multer@1.4.7:
     resolution: {integrity: sha512-/SNsDidUFCvqqcWDwxv2feww/yqhNeTRL5CVoL3jU4Goc4kKEL10T7Eye65ZqPNi4HRx8sAEX59pV1aEH7drNA==}
@@ -2026,6 +2033,12 @@ packages:
     engines: {node: '>= 0.6'}
     dependencies:
       mime-db: 1.52.0
+    dev: false
+
+  /mime@3.0.0:
+    resolution: {integrity: sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
     dev: false
 
   /mimic-fn@2.1.0:
